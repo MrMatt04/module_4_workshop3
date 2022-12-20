@@ -52,10 +52,11 @@
     border: solid black 4px;
     border-radius: 50px;
     background-color: #0a1172;
-    font-size: 50px; 
+    font-size: 40px; 
     display: flex;
     justify-content: center;
     align-items: center;
+    color: aliceblue;
 }
 .button:hover {
     background-color: red;

@@ -69,6 +69,16 @@ document.getElementById("0").onclick = function(){
 }
 document.getElementById("/").onclick = function(){
     console.log("/")
+    const string = display.innerHTML
+    //kijkt voor dubble
+    if (string.charAt(string.length - 1) === "+" || string.charAt(string.length - 1) === "-" || string.charAt(string.length - 1) === "/" || string.charAt(string.length - 1) === "*")
+    {
+    return false;
+    }
+    //kijkt voor begin
+    if (string === "") {
+        return false;
+      }
     optellen = optellen - parseInt(display.innerHTML)
     display.innerHTML= display.innerHTML + "/"
     console.log(optellen)
@@ -77,6 +87,14 @@ document.getElementById("/").onclick = function(){
 }
 document.getElementById("*").onclick = function(){
     console.log("*")
+    const string = display.innerHTML
+    if (string.charAt(string.length - 1) === "+" || string.charAt(string.length - 1) === "-" || string.charAt(string.length - 1) === "/" || string.charAt(string.length - 1) === "*")
+    {
+    return false;
+    }
+    if (string === "") {
+        return false;
+      }
     display.innerHTML= display.innerHTML + "*"
     optellen = optellen - parseInt(display.innerHTML)
     
@@ -85,6 +103,11 @@ document.getElementById("*").onclick = function(){
 }
 document.getElementById("-").onclick = function(){
     console.log("-")
+    const string = display.innerHTML
+    if (string.charAt(string.length - 1) === "+" || string.charAt(string.length - 1) === "-" || string.charAt(string.length - 1) === "/" || string.charAt(string.length - 1) === "*") 
+    {
+    return false;
+    }
     optellen = optellen - parseInt(display.innerHTML)
     display.innerHTML= display.innerHTML + "-"
     console.log(optellen)
@@ -92,12 +115,20 @@ document.getElementById("-").onclick = function(){
 }
 document.getElementById("+").onclick = function(){
     console.log("+")
-
+    const string = display.innerHTML
+    if (string.charAt(string.length - 1) === "+" || string.charAt(string.length - 1) === "-" || string.charAt(string.length - 1) === "/" || string.charAt(string.length - 1) === "*")
+    {
+    return false;
+    }
+    if (string === "") {
+        return false;
+      }
     operation2 = "+"
     optellen = optellen + parseInt(display.innerHTML)
     console.log(optellen)
     display.innerHTML= display.innerHTML + "+"
     play(1)
+    
     
 
 }
@@ -148,4 +179,22 @@ function removeLastCharacter() {
 function checkforop() {
     
     display.innerHTML = ""
+}
+
+//substring kijk laaste charater str
+function nooperation(){
+    if (check_l(display.innerHTML))
+    {
+
+    }
+}
+
+function check_opplus(str) {
+  if (string.charAt(string.length - 1) === "+") {
+        return false;
+  }
+    //TRUE
+    console.log(str)
+    return true;
+
 }
