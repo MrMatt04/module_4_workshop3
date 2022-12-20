@@ -1,0 +1,62 @@
+#rekenmachine {
+    width: 40%;
+    height: 750px;
+    border: solid black 4px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #3944bb;
+    display: flex;
+    flex-direction: column;
+
+}
+#display {
+    margin: 5% auto;
+    width: 80%;
+    height: 150px;
+    border: solid black 5px;
+    background-color: #63c5da;
+    font-size: 50px;
+    text-align: end;
+    display: flex;
+    align-items:  center;
+    justify-content: flex-end;
+    padding: 5%;
+}
+#keypad {
+    margin: 5% auto;
+    width: 80%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+#row1 {
+    display: flex;
+}
+#row2 {
+    display: flex;
+}
+#row3 {
+    display: flex;
+}
+#row4 {
+    display: flex;
+}
+#row5 {
+    display: flex;
+    justify-content: space-between;
+}
+.button {
+    margin: 2%;
+    width: 20%;
+    height: 75px;
+    border: solid black 4px;
+    border-radius: 50px;
+    background-color: #0a1172;
+    font-size: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button:hover {
+    background-color: red;
+}
